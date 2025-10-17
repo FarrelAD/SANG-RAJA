@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sang_raja/widgets/menu_item.dart';
+import 'package:sang_raja/widgets/sang_raja_app_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,19 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16),
-            child: CircleAvatar(
-              backgroundColor: Colors.grey[300],
-              child: const Icon(Icons.person, color: Colors.black),
-            ),
-          ),
-        ],
-      ),
+      appBar: const SangRajaAppBar(title: ''),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sang_raja/widgets/sang_raja_app_bar.dart';
 
 class MasyarakatPage extends StatelessWidget {
   const MasyarakatPage({super.key});
@@ -7,27 +8,7 @@ class MasyarakatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: const Text(
-          'Masyarakat RT 03',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16),
-            child: CircleAvatar(
-              backgroundColor: Colors.grey[300],
-              child: const Icon(Icons.person, color: Colors.black),
-            ),
-          ),
-        ],
-      ),
+      appBar: const SangRajaAppBar(title: 'Masyarakat RT 03'),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
